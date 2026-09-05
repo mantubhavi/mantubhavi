@@ -1,0 +1,121 @@
+/* =========================================
+   MAHANTESH BHAVI PORTFOLIO
+   Modern Dark Developer Theme
+========================================= */
+:root {
+  --bg: #070a0f;
+  --bg-soft: #0b1017;
+  --bg-card: #0f151eb8;
+  --bg-card-solid: #10161f;
+
+  --text: #f5f7fa;
+  --text-soft: #d5dbe5;
+  --muted: #8994a5;
+  --muted-dark: #5e6979;
+
+  --border: rgba(255, 255, 255, 0.085);
+  --border-hover: rgba(124, 92, 255, 0.42);
+
+  --primary: #7c5cff;
+  --primary-light: #9b85ff;
+  --cyan: #00d9ff;
+  --green: #43e97b;
+  --orange: #ffb85c;
+  --blue: #4da6ff;
+
+  --gradient: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--cyan)
+  );
+
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --container: 1180px;
+  --radius: 20px;
+
+  --transition: 0.3s ease;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::selection {
+  color: #fff;
+  background: var(--primary);
+}
+
+::selection {
+  color: #fff;
+  background: var(--primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(92%, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding: 120px 0;
+}
+
+.section-dark {
+  background: rgba(255, 255, 255, 0.012);
+  border-top: 1px solid rgba(255, 255, 255, 0.015);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.015);
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252d3a;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
