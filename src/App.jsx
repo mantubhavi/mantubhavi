@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { Home, About, Skills, Focus, Projects, Contact } from "./pages/index";
-import TopNav from "./layout/TopNav";
+import { TopNav, Footer } from "./layout";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

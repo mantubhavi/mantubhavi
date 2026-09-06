@@ -1,13 +1,16 @@
 import { Link } from "react-router";
 import Styles from "./TopNav.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
 const TopNav = () => {
   return (
     <header className={`${Styles.navbar} ${Styles.scrolled}`}>
       <div className={`container ${Styles["nav-container"]}`}>
         <Link to="/" className={Styles.logo}>
-          <span>&lt;</span>MB<span>/&gt;</span>
+          <FiChevronLeft className={Styles.logoIcon} size={20} />
+          MB<span className={Styles.slash}>/</span>
+          <FiChevronRight className={Styles.logoIcon} size={20} />
         </Link>
 
         <button

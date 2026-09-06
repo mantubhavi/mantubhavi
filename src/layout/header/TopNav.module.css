@@ -33,16 +33,32 @@
 
 /* Logo */
 .logo {
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
+
   font-family: var(--font-mono);
   font-size: 21px;
   font-weight: 600;
   letter-spacing: -1px;
+  line-height: 1;
+
+  text-decoration: none;
   transition: var(--transition);
 }
 
-.logo span {
-    color: var(--primary-light);
+.logoIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 -3px;
+  color: var(--primary-light);
+  stroke-width: 4;
+}
+
+.slash {
+  color: var(--primary-light);
+  margin-left: 1px;
 }
 
 .logo:hover {
