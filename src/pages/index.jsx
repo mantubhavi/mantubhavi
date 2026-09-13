@@ -1,5 +1,5 @@
 import Home from "./Home";
-import About from "./About";
+import About from "./about/About";
 import Skills from "./Skills";
 import Focus from "./Focus";
 import Projects from "./Projects";
