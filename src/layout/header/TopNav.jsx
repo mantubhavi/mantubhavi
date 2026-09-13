@@ -22,7 +22,7 @@ const TopNav = () => {
         </button>
 
         <nav id="navMenu">
-          <Link to="/home"> Home</Link>
+          <Link to="/"> Home</Link>
           <Link to="/about">About</Link>
           <Link to="/skills">Skills</Link>
           <Link to="/focus">Focus</Link>

@@ -5,10 +5,10 @@ import { TopNav, Footer } from "./layout";
 function App() {
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/mantubhavi">
         <TopNav />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/focus" element={<Focus />} />
           <Route path="/projects" element={<Projects />} />
