@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       {/* Background  */}
-      <div class="background-grid"></div>
-      <div class="glow glow-one"></div>
-      <div class="glow glow-two"></div>
+      <div className="background-grid"></div>
+      <div className="glow glow-one"></div>
+      <div className="glow glow-two"></div>
 
       <BrowserRouter basename="/mantubhavi">
         <TopNav />

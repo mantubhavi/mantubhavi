@@ -1,32 +1,51 @@
 import { Link } from "react-router";
 import Styles from "./TopNav.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FiChevronRight, FiChevronLeft, FiX } from "react-icons/fi";
+import { useState } from "react";
 
 const TopNav = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className={`${Styles.navbar} ${Styles.scrolled}`}>
       <div className={`container ${Styles["nav-container"]}`}>
-        <Link to="/" className={Styles.logo}>
+        <Link to="/" className={Styles.logo} onClick={closeMenu}>
           <FiChevronLeft className={Styles.logoIcon} size={20} />
           MB<span className={Styles.slash}>/</span>
           <FiChevronRight className={Styles.logoIcon} size={20} />
         </Link>
 
+        {/* Mobile menu button */}
         <button
           className={Styles["menu-toggle"]}
-          id="menuToggle"
-          aria-label="Toggle menu"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
         >
-          <GiHamburgerMenu />
+          {isMenuOpen ? <FiX /> : <GiHamburgerMenu />}
         </button>
 
-        <nav id="navMenu">
-          <Link to="/"> Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/focus">Focus</Link>
-          <Link to="/contact">Contact</Link>
+        <nav
+          className={`${Styles.navMenu} ${isMenuOpen ? Styles.menuOpen : ""}`}
+        >
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
+          <Link to="/about" onClick={closeMenu}>
+            About
+          </Link>
+          <Link to="/skills" onClick={closeMenu}>
+            Skills
+          </Link>
+          <Link to="/focus" onClick={closeMenu}>
+            Focus
+          </Link>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </nav>
       </div>
     </header>
