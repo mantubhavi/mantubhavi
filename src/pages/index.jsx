@@ -1,9 +1,8 @@
 import Home from "./Home";
 import About from "./about/About";
-import Skills from "./Skills";
-import Focus from "./Focus";
-import Projects from "./Projects";
+import Skills from "./skills/Skills";
+import Focus from "./focus/Focus";
 import Contact from "./contact/Contact";
 import Hero from "./hero/Hero";
 
-export { Home, About, Skills, Focus, Projects, Contact, Hero };
+export { Home, About, Skills, Focus, Contact, Hero };

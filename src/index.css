@@ -23,11 +23,9 @@
   --orange: #ffb85c;
   --blue: #4da6ff;
 
-  --gradient: linear-gradient(
-    135deg,
-    var(--primary),
-    var(--cyan)
-  );
+  --gradient: linear-gradient(135deg,
+      var(--primary),
+      var(--cyan));
 
   --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -118,4 +116,75 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+/* Section Headings */
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: clamp(36px, 5vw, 55px);
+  font-weight: 700;
+  line-height: 1;
+
+  letter-spacing: -2.5px;
+}
+
+.section-heading h2 span {
+  color: var(--primary-light);
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  opacity: 0.32;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px),
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px);
+
+  background-size: 50px 50px;
+
+  mask-image: linear-gradient(to bottom,
+      black 0%,
+      rgba(0, 0, 0, 0.65) 60%,
+      transparent 100%);
+}
+
+.glow {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.11;
+  z-index: -9;
+  pointer-events: none;
+}
+
+.glow-one {
+  top: -180px;
+  left: -180px;
+  background: var(--primary);
+}
+
+.glow-two {
+  right: -180px;
+  bottom: 5%;
+  background: var(--cyan);
 }
