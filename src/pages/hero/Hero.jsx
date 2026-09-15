@@ -66,7 +66,7 @@ const Hero = () => {
                 <span></span>
               </div>
 
-              <span>mahantesh.cs</span>
+              <span>mahantesh.json</span>
 
               <span></span>
             </div>
