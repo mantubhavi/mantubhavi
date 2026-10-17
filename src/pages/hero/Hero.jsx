@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import Styles from "./Hero.module.css";
 const Hero = () => {
   return (
-    <section className={Styles.hero} id="home">
+    <section className={Styles.hero} id="hero">
       <div className={`container ${Styles.heroContent}`}>
         <div>
           <p className={Styles.eyebrow}>Namaste, I'M</p>

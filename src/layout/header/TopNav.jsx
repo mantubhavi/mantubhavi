@@ -2,15 +2,28 @@ import { Link } from "react-router";
 import Styles from "./TopNav.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiChevronRight, FiChevronLeft, FiX } from "react-icons/fi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const TopNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleNavbar = () => {
+      setIsScrolled(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleNavbar, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleNavbar);
+    };
+  }, []);
+
   return (
-    <header className={`${Styles.navbar} ${Styles.scrolled}`}>
+    <header className={`${Styles.navbar} ${isScrolled ? Styles.scrolled : ""}`}>
       <div className={`container ${Styles["nav-container"]}`}>
         <Link to="/" className={Styles.logo} onClick={closeMenu}>
           <FiChevronLeft className={Styles.logoIcon} size={20} />

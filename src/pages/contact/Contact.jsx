@@ -4,7 +4,7 @@ import styles from "./Contact.module.css";
 
 const Contact = () => {
   return (
-    <section className={`section ${styles["contact-section"]}`}>
+    <section className={`section ${styles["contact-section"]}`} id="contact">
       <div className={`container`}>
         <div className={styles["contact-content"]}>
           <p className={`${styles.eyebrow}`}>LET'S CONNECT</p>

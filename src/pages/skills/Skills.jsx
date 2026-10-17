@@ -3,7 +3,7 @@ import { developmentSkills } from "../../util/data";
 
 const Skills = () => {
   return (
-    <section className={`section section-dark}`}>
+    <section className={`section section-dark`} id="skills">
       <div className={`container`}>
         <div className="section-heading">
           <div>
