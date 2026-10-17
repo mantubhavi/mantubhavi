@@ -188,3 +188,13 @@ img {
   bottom: 5%;
   background: var(--cyan);
 }
+
+
+/* =========================================
+   RESPONSIVE - 650px
+========================================= */
+@media (max-width: 650px) {
+  .container {
+    width: min(90%, var(--container));
+  }
+}

@@ -131,3 +131,34 @@
     font-size: 11px;
     line-height: 1.6;
 }
+
+/* Responsive - 1100px */
+.about-grid {
+    gap: 50px
+}
+
+/* Responsive - 850px */
+.about-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Responsive - 650px */
+.about-cards {
+    grid-template-columns: 1fr;
+}
+
+.section-heading {
+    gap: 14px;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: 39px;
+    letter-spacing: -2px;
+}
+
+.info-card {
+    min-height: 125px;
+}
+
+/* RESPONSIVE - 420px */

@@ -110,3 +110,26 @@
     align-items: center;
     justify-content: center;
 }
+
+/* =========================================
+   RESPONSIVE - 650px
+========================================= */
+@media (max-width: 650px) {
+    .section {
+        padding: 85px 0;
+    }
+
+    .contact-section {
+        padding: 90px 0;
+    }
+
+    .contact-content h2 {
+        font-size: 45px;
+        letter-spacing: -2.5px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+
+}

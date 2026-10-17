@@ -132,3 +132,49 @@
 
     background: rgba(124, 92, 255, 0.05);
 }
+
+
+/* =========================================
+   RESPONSIVE - 650px
+========================================= */
+@media (max-width:850px) {
+
+    .ai-section::before,
+    .ai-section::after {
+        right: -150px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - 650px
+========================================= */
+@media (max-width:650px) {
+    .ai-content h2 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .ai-section {
+        padding: 90px 0;
+    }
+
+    .ai-content h2 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .ai-section::before,
+    .ai-section::after {
+        display: none;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - 420px
+========================================= */
+@media (max-width:420px) {
+    .ai-content h2 {
+        font-size: 41px;
+    }
+}
